@@ -9,7 +9,7 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
-        path: 'detail/:name', //los : indican que el valor será dinámico (params)
+        path: 'detail/:id', //los : indican que el valor será dinámico (params)
         component: DetailComponent,
       },
       {

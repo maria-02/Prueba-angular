@@ -15,6 +15,6 @@ export class MoviesService {
   }
 
   getOneMovie(movieId: string) {
-    return this.http.get(`${this.URL}/films/${movieId}`);
+    return this.http.get(`${this.URL}/${movieId}`);
   }
 }
