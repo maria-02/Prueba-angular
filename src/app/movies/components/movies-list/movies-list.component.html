@@ -1,1 +1,10 @@
-<p>movies-list works!</p>
+<mat-tab-group>
+    <mat-tab label="Cards">
+        <mat-grid-list class="cards-container" cols="4" rowHeight="420px">
+            <mat-spinner *ngIf="loader"></mat-spinner>
+            <mat-grid-tile *ngFor="let movie of movies">
+                <app-movies-card [movie]="movie"></app-movies-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-tab>
+</mat-tab-group>
