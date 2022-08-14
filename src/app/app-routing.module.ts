@@ -1,6 +1,5 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PagenotfoundComponent } from './movies/components/pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {
@@ -10,8 +9,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    pathMatch: 'full',
-    component: PagenotfoundComponent,
+    redirectTo: '/home',
   },
 ];
 

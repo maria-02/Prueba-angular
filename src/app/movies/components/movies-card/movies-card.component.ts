@@ -14,7 +14,7 @@ export class MoviesCardComponent implements OnInit {
   ngOnInit(): void {}
 
   goTo(id: string) {
-    this.router.navigate([`/detail/${id}`]);
+    this.router.navigate([`/home/detail/${id}`]);
     console.log(id);
   }
 }

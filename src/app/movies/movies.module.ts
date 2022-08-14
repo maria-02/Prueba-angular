@@ -8,6 +8,7 @@ import { MaterialModule } from '../material/material.module';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { MoviesCardComponent } from './components/movies-card/movies-card.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { MainComponent } from './pages/main/main.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
     MoviesListComponent,
     MoviesCardComponent,
     PagenotfoundComponent,
+    MainComponent,
   ],
   imports: [CommonModule, MoviesRoutingModule, MaterialModule],
 })
