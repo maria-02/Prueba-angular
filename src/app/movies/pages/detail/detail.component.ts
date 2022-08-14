@@ -17,10 +17,7 @@ export class DetailComponent implements OnInit {
     console.log(this.actRoute.snapshot.paramMap.get('id'));
 
     this.moviesService
-      .getOneMovie(
-        this.actRoute.snapshot.paramMap.get('id') ||
-          '2baf70d1-42bb-4437-b551-e5fed5a87abe'
-      )
+      .getOneMovie(this.actRoute.snapshot.paramMap.get('id')!)
       .subscribe((resp) => console.log(resp));
   }
 }
