@@ -13,11 +13,30 @@ export class DetailComponent implements OnInit {
     private moviesService: MoviesService
   ) {}
 
-  ngOnInit(): void {
-    console.log(this.actRoute.snapshot.paramMap.get('id'));
+  people: any;
+  movies: any;
+  loader = true;
+  id = this.actRoute.snapshot.paramMap.get('id');
 
-    this.moviesService
-      .getOneMovie(this.actRoute.snapshot.paramMap.get('id')!)
-      .subscribe((resp) => console.log(resp));
+  ngOnInit(): void {
+    // this.moviesService
+    //   .getOneMovie(this.actRoute.snapshot.paramMap.get('id')!)
+    //   .subscribe((resp) => console.log(resp));
+    this.getMoviesFromService();
+    this.getCharactersFromService();
+  }
+
+  getMoviesFromService() {
+    this.moviesService.getOneMovie(this.id!).subscribe((resp) => {
+      this.movies = resp;
+      this.loader = false;
+    });
+  }
+
+  getCharactersFromService() {
+    this.moviesService.getCharacter(this.id!).subscribe((resp) => {
+      this.people = resp;
+      console.log(resp);
+    });
   }
 }

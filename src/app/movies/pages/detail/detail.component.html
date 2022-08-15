@@ -1,1 +1,37 @@
-<p>detail works!</p>
+<h1>{{movies.title}}</h1>
+<mat-spinner *ngIf="loader" id="spinner"></mat-spinner>
+<img [src]="movies.movie_banner" alt="Imagen de la película">
+<mat-grid-list cols="2">
+    <mat-grid-tile class="datos">
+        <div>
+            <dl>
+                <dt>Nombre en kanji: </dt>
+                <dd>{{movies.original_title}}</dd>
+                <dt>Nombre romanizado:</dt>
+                <dd>{{movies.original_title_romanised}}</dd>
+                <dt>Director:</dt>
+                <dd>{{movies.director}}</dd>
+                <dt>Productor:</dt>
+                <dd>{{movies.producer}}</dd>
+                <dt>Personajes:</dt>
+            </dl>
+            <ul>
+                <li *ngFor="let personaje of people.slice(0,10)">{{personaje.name}}</li>
+            </ul>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="datos">
+        <div>
+            <dl>
+                <dt>Fecha de lanzamiento: </dt>
+                <dd>{{movies.release_date}}</dd>
+                <dt>Duración de la película: </dt>
+                <dd>{{movies.running_time}}</dd>
+                <dt>Puntuación en Rotten Tomatoes: </dt>
+                <dd>{{movies.rt_score}}</dd>
+
+            </dl><br>
+            <p><span>Descripción de {{movies.title}}:
+                </span> <br>{{movies.description}}</p>
+        </div>
+    </mat-grid-tile>

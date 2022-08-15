@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+img {
+  display: block;
+  margin: 3rem auto 1rem auto;
+  max-width: 40rem;
+}
+.datos {
+  font-size: 1.5rem;
+}
+dl,
+ul {
+  margin: 0;
+}
+
+dt {
+  padding-top: 1rem;
+}
+
+li {
+  list-style-type: none;
+  padding: 0.3rem;
+}
+span {
+  font-weight: bolder;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}

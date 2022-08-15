@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class MoviesService {
   constructor(private http: HttpClient) {}
 
-  private URL: string = 'https://ghibliapi.herokuapp.com/films/';
+  private URL: string = 'https://ghibliapi.herokuapp.com/films';
 
   getAllMovies(): Observable<any> {
     return this.http.get(this.URL);
@@ -16,5 +16,9 @@ export class MoviesService {
 
   getOneMovie(movieId: string) {
     return this.http.get(`${this.URL}/${movieId}`);
+  }
+
+  getCharacter(movieId: string) {
+    return this.http.get(`${this.URL}/${movieId}/people`);
   }
 }
